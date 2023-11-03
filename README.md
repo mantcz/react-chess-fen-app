@@ -41,3 +41,4 @@ En garde!
 # My solution
 
 1. I first analysed the requirements and created a new [REQUIREMENTS](./REQUIREMENTS.md) document based on my understanding.
+1. I created a [very basic wireframe](./assets/react-chess.png).

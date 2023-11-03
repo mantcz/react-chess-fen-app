@@ -15,6 +15,8 @@ Here is my initial work on understanding the requirements.
 ### UI
 
 1. input box
+1. start button
+1. error box
 1. chess board with cells
 1. pieces represented by a letter
 
