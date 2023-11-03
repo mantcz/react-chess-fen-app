@@ -11,7 +11,7 @@ The application should support FEN strings as input and also output. Specificall
 - `[REQ5](REQUIREMENTS.md#req5)` Any piece can be moved to any suitable square. The app does not need to enforce chess piece movement rules.
 - `[REQ6](REQUIREMENTS.md#req6)` When a chess piece is moved the FEN input will be updated with the corresponding value
 - `[REQ7](REQUIREMENTS.md#req7)` The FEN value should be persisted, so that the “game” can continue after the page is reloaded
-- `[REQ8]` Write some tests!
+- `[REQ8](REQUIREMENTS.md#req8)` Write some tests!
 
 Check these resources for more information on FEN notations:
 

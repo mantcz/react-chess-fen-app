@@ -100,3 +100,11 @@ Here is my initial work on understanding the requirements.
 
 1. update the current state of the FEN string in component state and in localStorage when legal move is concluded
 1. on app reload check if there is a current game in localStorage. If yes -> load the game, if not -> start new game and ask for input
+
+## REQ8
+
+"Write some tests!"
+
+### Derrived requirements
+
+1. I tried to identify some areas to test above, but will do as I go.
