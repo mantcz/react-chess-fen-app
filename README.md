@@ -20,6 +20,24 @@ Check these resources for more information on FEN notations:
 
 En garde!
 
+# TODO
+
+- [x] understanding requirements
+- [x] create requirements document
+- [ ] initial app setup
+- [ ] add tech stack info
+- [ ] update docs with how to developing locally
+- [ ] update docs with how the app is deployed
+- [ ] add app URL
+- [ ] REQ1
+- [ ] REQ2
+- [ ] REQ3
+- [ ] REQ4
+- [ ] REQ5
+- [ ] REQ6
+- [ ] REQ7
+- [ ] REQ8
+
 # My solution
 
 1. I first analysed the requirements and created a new [REQUIREMENTS](./REQUIREMENTS.md) document based on my understanding.
