@@ -22,9 +22,12 @@ En garde!
 
 # My solution
 
+The app is available at https://react-chess-fen-app.onrender.com
+
 1. I first analysed the requirements and created a new [REQUIREMENTS](./REQUIREMENTS.md) document based on my understanding
 1. I created a [very basic wireframe](./assets/react-chess.png)
 1. I added [DEVELOPING](./DEVELOPING.md) file for local development instructions
+1. I added [DEPLOYMENT](./DEPLOYMENT.md) file with CI/CD information
 
 ## TODOs
 
@@ -33,8 +36,8 @@ En garde!
 - [x] initial app setup
 - [x] add tech stack info
 - [x] update docs with how to developing locally
-- [ ] update docs with how the app is deployed
-- [ ] add app URL
+- [x] update docs with how the app is deployed
+- [x] add app URL
 - [ ] REQ1
 - [ ] REQ2
 - [ ] REQ3
