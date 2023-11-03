@@ -1,0 +1,35 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+header {
+  border-bottom: 1px solid #313131;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card {
+  padding: 2em;
+}
