@@ -11,47 +11,36 @@ import bBishop from "@/assets/dark-bishop.svg";
 import bKnight from "@/assets/dark-knight.svg";
 import bPawn from "@/assets/dark-pawn.svg";
 
+// Piece type is already validated at this point
 type PieceProps = {
-  type:
-    | "light-queen"
-    | "light-king"
-    | "light-rook"
-    | "light-bishop"
-    | "light-knight"
-    | "light-pawn"
-    | "dark-queen"
-    | "dark-king"
-    | "dark-rook"
-    | "dark-bishop"
-    | "dark-knight"
-    | "dark-pawn";
+  type: string;
 };
 
 export const Piece = ({ type }: PieceProps) => {
   switch (type) {
-    case "light-queen":
+    case "q":
       return <img src={wQueen} width={40} height={40} alt="light queen" />;
-    case "light-king":
+    case "k":
       return <img src={wKing} width={40} height={40} alt="light king" />;
-    case "light-rook":
+    case "r":
       return <img src={wRook} width={40} height={40} alt="light rook" />;
-    case "light-bishop":
+    case "b":
       return <img src={wBishop} width={40} height={40} alt="light bishop" />;
-    case "light-knight":
+    case "n":
       return <img src={wKnight} width={40} height={40} alt="light knight" />;
-    case "light-pawn":
+    case "p":
       return <img src={wPawn} width={40} height={40} alt="light pawn" />;
-    case "dark-queen":
+    case "Q":
       return <img src={bQueen} width={40} height={40} alt="dark queen" />;
-    case "dark-king":
+    case "K":
       return <img src={bKing} width={40} height={40} alt="dark king" />;
-    case "dark-rook":
+    case "R":
       return <img src={bRook} width={40} height={40} alt="dark rook" />;
-    case "dark-bishop":
+    case "B":
       return <img src={bBishop} width={40} height={40} alt="dark bishop" />;
-    case "dark-knight":
+    case "N":
       return <img src={bKnight} width={40} height={40} alt="dark knight" />;
-    case "dark-pawn":
+    case "P":
       return <img src={bPawn} width={40} height={40} alt="dark pawn" />;
     default:
       return null;
