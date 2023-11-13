@@ -64,4 +64,12 @@ It is by no means perfect, and it wasn't my intention for the game to be perfect
 1. accessibility testing (axe-core-npm)
 1. no PRs, just pushing against the main branch
 
+## Potential functionalities
+
+1. allow user to save and load past games
+1. allow users to select board colours
+1. allow users to share board by a link
+1. add moves history, with undo and do
+1. and more...
+
 Thank you for yor time 😊
