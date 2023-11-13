@@ -1,15 +1,15 @@
-import wQueen from "@/assets/light-queen.svg";
-import wKing from "@/assets/light-king.svg";
-import wRook from "@/assets/light-rook.svg";
-import wBishop from "@/assets/light-bishop.svg";
-import wKnight from "@/assets/light-knight.svg";
-import wPawn from "@/assets/light-pawn.svg";
-import bQueen from "@/assets/dark-queen.svg";
-import bKing from "@/assets/dark-king.svg";
-import bRook from "@/assets/dark-rook.svg";
-import bBishop from "@/assets/dark-bishop.svg";
-import bKnight from "@/assets/dark-knight.svg";
-import bPawn from "@/assets/dark-pawn.svg";
+import wQueen from "./../../assets/light-queen.svg";
+import wKing from "./../../assets/light-king.svg";
+import wRook from "./../../assets/light-rook.svg";
+import wBishop from "./../../assets/light-bishop.svg";
+import wKnight from "./../../assets/light-knight.svg";
+import wPawn from "./../../assets/light-pawn.svg";
+import bQueen from "./../../assets/dark-queen.svg";
+import bKing from "./../../assets/dark-king.svg";
+import bRook from "./../../assets/dark-rook.svg";
+import bBishop from "./../../assets/dark-bishop.svg";
+import bKnight from "./../../assets/dark-knight.svg";
+import bPawn from "./../../assets/dark-pawn.svg";
 import { PieceType } from "../../aux/types";
 
 // Piece type is already validated at this point
