@@ -45,4 +45,4 @@ The app is available at https://react-chess-fen-app.onrender.com
 - [x] REQ5
 - [x] REQ6
 - [x] REQ7
-- [ ] REQ8
+- [x] REQ8
