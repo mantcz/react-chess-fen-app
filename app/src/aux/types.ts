@@ -11,6 +11,7 @@ export type PieceType =
   | "r"
   | "q"
   | "k";
+
 export type ColorType = "light" | "dark";
 
 export type BoardState = {

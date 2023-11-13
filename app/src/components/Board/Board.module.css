@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.label {
+  width: 60px;
+  height: 30px;
+}
+
+.labelVerticalLeft {
+  width: 30px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-left: -30px;
+}
+
+.labelVerticalRight {
+  width: 30px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}

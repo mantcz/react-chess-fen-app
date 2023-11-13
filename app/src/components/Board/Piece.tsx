@@ -10,10 +10,11 @@ import bRook from "@/assets/dark-rook.svg";
 import bBishop from "@/assets/dark-bishop.svg";
 import bKnight from "@/assets/dark-knight.svg";
 import bPawn from "@/assets/dark-pawn.svg";
+import { PieceType } from "../../aux/types";
 
 // Piece type is already validated at this point
 type PieceProps = {
-  type: string;
+  type: PieceType;
 };
 
 export const Piece = ({ type }: PieceProps) => {

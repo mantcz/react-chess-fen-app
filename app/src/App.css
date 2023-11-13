@@ -61,6 +61,7 @@ input {
   cursor: pointer;
   transition: border-color 0.25s;
   margin-right: 10px;
+  width: 250px;
 }
 
 .error-box {
@@ -83,8 +84,25 @@ input {
 
 .right {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .left {
   width: 50%;
+}
+
+.pieces {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #164e05;
+  border-radius: 1rem;
+  width: fit-content;
+  margin-top: 2rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
