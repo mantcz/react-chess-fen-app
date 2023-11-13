@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Piece } from "./Board/Piece";
 import { isValidBoardString, normalisePositionString } from "./../aux";
@@ -23,6 +23,19 @@ export const GameScreen = () => {
     ).board
   );
 
+  useEffect(() => {
+    // Load the last saved FEN string
+    const savedCurrentFenString =
+      window.localStorage.getItem("currentFenString");
+
+    if (savedCurrentFenString) {
+      setCurrentFenString(savedCurrentFenString);
+      setBoardState(
+        new ChessBoard(normalisePositionString(savedCurrentFenString)).board
+      );
+    }
+  }, []);
+
   const onSquareClick = (square: SquareCoordsType) => {
     // CLick on the same square twice to deselect it
     if (square === selectedSquare) {
@@ -38,6 +51,8 @@ export const GameScreen = () => {
       setBoardState(chessBoard.board);
 
       setSelectedSquare(null);
+
+      saveData(chessBoard.toFenPosition());
     } else {
       // We don't have a selected square, so we want to select one
       setSelectedSquare(square);
@@ -46,6 +61,8 @@ export const GameScreen = () => {
       chessBoard.selectSquare(square);
       setCurrentFenString(chessBoard.toFenPosition());
       setBoardState(chessBoard.board);
+
+      saveData(chessBoard.toFenPosition());
     }
   };
 
@@ -55,6 +72,12 @@ export const GameScreen = () => {
     setBoardState(chessBoard.board);
 
     setSelectedSquare(null);
+
+    saveData(chessBoard.toFenPosition());
+  };
+
+  const saveData = (currentFenString: string) => {
+    window.localStorage.setItem("currentFenString", currentFenString);
   };
 
   return (
@@ -84,6 +107,8 @@ export const GameScreen = () => {
                     new ChessBoard(normalisePositionString(fenPositionString))
                       .board
                   );
+
+                  saveData(fenPositionString);
                 } else {
                   setErrorMessage("Invalid FEN string");
                   setTimeout(() => {
@@ -95,7 +120,7 @@ export const GameScreen = () => {
               }}
               disabled={fenString.length === 0}
             >
-              Load game
+              Load new game
             </button>
           </div>
 
@@ -103,7 +128,7 @@ export const GameScreen = () => {
             <p>{errorMessage}</p>
           </div>
 
-          <div className="fen-state">
+          <div className={css.fen_state}>
             <p>Curent FEN state</p>
             <p>{currentFenString}</p>
           </div>
