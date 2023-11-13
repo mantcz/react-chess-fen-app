@@ -4,6 +4,7 @@
 
 1. skeleton app set up with [React + TypeScript + Vite](https://vitejs.dev/guide/)
 1. [pnpm](https://pnpm.io/) as package manager
+1. [vitest](https://vitest.dev/) as testing suite
 
 ## Prerequisites
 
@@ -17,6 +18,7 @@ Make sure you have installed the following:
 1. inside the app folder run `pnpm install`
 1. then run `pnpm dev` to spin up the app
 1. as you change the code, the app should refresh itself
+1. you can run `pnpm test` in a separate terminal to keep an eye on tests
 
 ## React + TypeScript + Vite
 
