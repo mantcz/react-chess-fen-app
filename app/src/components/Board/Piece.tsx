@@ -18,29 +18,29 @@ type PieceProps = {
 
 export const Piece = ({ type }: PieceProps) => {
   switch (type) {
-    case "q":
-      return <img src={wQueen} width={40} height={40} alt="light queen" />;
-    case "k":
-      return <img src={wKing} width={40} height={40} alt="light king" />;
-    case "r":
-      return <img src={wRook} width={40} height={40} alt="light rook" />;
-    case "b":
-      return <img src={wBishop} width={40} height={40} alt="light bishop" />;
-    case "n":
-      return <img src={wKnight} width={40} height={40} alt="light knight" />;
-    case "p":
-      return <img src={wPawn} width={40} height={40} alt="light pawn" />;
     case "Q":
-      return <img src={bQueen} width={40} height={40} alt="dark queen" />;
+      return <img src={wQueen} width={40} height={40} alt="light queen" />;
     case "K":
-      return <img src={bKing} width={40} height={40} alt="dark king" />;
+      return <img src={wKing} width={40} height={40} alt="light king" />;
     case "R":
-      return <img src={bRook} width={40} height={40} alt="dark rook" />;
+      return <img src={wRook} width={40} height={40} alt="light rook" />;
     case "B":
-      return <img src={bBishop} width={40} height={40} alt="dark bishop" />;
+      return <img src={wBishop} width={40} height={40} alt="light bishop" />;
     case "N":
-      return <img src={bKnight} width={40} height={40} alt="dark knight" />;
+      return <img src={wKnight} width={40} height={40} alt="light knight" />;
     case "P":
+      return <img src={wPawn} width={40} height={40} alt="light pawn" />;
+    case "q":
+      return <img src={bQueen} width={40} height={40} alt="dark queen" />;
+    case "k":
+      return <img src={bKing} width={40} height={40} alt="dark king" />;
+    case "r":
+      return <img src={bRook} width={40} height={40} alt="dark rook" />;
+    case "b":
+      return <img src={bBishop} width={40} height={40} alt="dark bishop" />;
+    case "n":
+      return <img src={bKnight} width={40} height={40} alt="dark knight" />;
+    case "p":
       return <img src={bPawn} width={40} height={40} alt="dark pawn" />;
     default:
       return null;
