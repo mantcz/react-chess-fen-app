@@ -12,14 +12,14 @@
   transition: all 0.3s ease-in-out;
 }
 
-.selected {
-  background-color: rgb(163, 96, 19);
-}
-
 .light {
   background-color: rgb(229, 234, 179);
 }
 
 .dark {
   background-color: rgb(28, 133, 18);
+}
+
+.selected {
+  background-color: #a35eda;
 }

@@ -1,4 +1,4 @@
-import { BoardState } from "./types";
+import { BoardState, SquareCoordsType } from "./types";
 
 export class ChessBoard {
   board: BoardState | object;
@@ -16,7 +16,7 @@ export class ChessBoard {
       for (const col of cols) {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        this.board[col + row] = { piece: "1", selected: "false" };
+        this.board[col + row] = { piece: "1", selected: false };
       }
     }
   }
@@ -41,6 +41,12 @@ export class ChessBoard {
           colIndex += parseInt(char);
         }
       }
+    }
+  }
+
+  selectSquare(square: SquareCoordsType) {
+    if (this.board[square]) {
+      this.board[square].selected = true;
     }
   }
 }

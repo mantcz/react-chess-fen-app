@@ -9,9 +9,10 @@ type ChessRowProps = {
     selected: boolean;
   }[];
   firstBox: "dark" | "light";
+  onSquareClick: (square: SquareCoordsType) => void;
 };
 
-export const ChessRow = ({ row, firstBox }: ChessRowProps) => {
+export const ChessRow = ({ row, firstBox, onSquareClick }: ChessRowProps) => {
   let squareColours: ColorType[] = ["dark", "light"];
   if (firstBox == "light") {
     squareColours = ["light", "dark"];
@@ -32,6 +33,8 @@ export const ChessRow = ({ row, firstBox }: ChessRowProps) => {
           key={square.square}
           type={index % 2 == 0 ? squareColours[0] : squareColours[1]}
           selected={square.selected}
+          squareCoordinates={square.square}
+          onSquareClick={onSquareClick}
         >
           <Piece type={square.piece} />
         </Square>

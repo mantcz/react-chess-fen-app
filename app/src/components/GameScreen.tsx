@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Piece } from "./Board/Piece";
 import { isValidBoardString, normalisePositionString } from "./../aux";
 import { ChessBoard } from "../aux/boardState";
-import { BoardState } from "../aux/types";
+import { BoardState, SquareCoordsType } from "../aux/types";
 import { Board } from "./Board/Board";
 
 export const GameScreen = () => {
@@ -11,12 +11,24 @@ export const GameScreen = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [currentFenString, setCurrentFenString] = useState("");
 
+  const [selectedSquare, setSelectedSquare] = useState<SquareCoordsType | null>(
+    null
+  );
+
   // Initial board state set up to starting position
   const [boardState, setBoardState] = useState<BoardState | object | null>(
     new ChessBoard(
       normalisePositionString("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
     ).board
   );
+
+  const onSquareClick = (square: SquareCoordsType) => {
+    setSelectedSquare(square);
+
+    const chessBoard = new ChessBoard(currentFenString);
+    chessBoard.selectSquare(square);
+    setBoardState(chessBoard.board);
+  };
 
   return (
     <main>
@@ -69,7 +81,12 @@ export const GameScreen = () => {
             <p>{currentFenString}</p>
           </div>
 
-          {boardState && <Board boardState={boardState as BoardState} />}
+          {boardState && (
+            <Board
+              boardState={boardState as BoardState}
+              onSquareClick={onSquareClick}
+            />
+          )}
         </div>
 
         <div className="right">
