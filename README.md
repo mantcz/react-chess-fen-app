@@ -41,8 +41,8 @@ The app is available at https://react-chess-fen-app.onrender.com
 - [x] REQ1
 - [x] REQ2
 - [x] REQ3
-- [ ] REQ4
-- [ ] REQ5
-- [ ] REQ6
+- [x] REQ4
+- [x] REQ5
+- [x] REQ6
 - [ ] REQ7
 - [ ] REQ8
