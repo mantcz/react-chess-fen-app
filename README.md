@@ -40,7 +40,7 @@ The app is available at https://react-chess-fen-app.onrender.com
 - [x] add app URL
 - [x] REQ1
 - [x] REQ2
-- [ ] REQ3
+- [x] REQ3
 - [ ] REQ4
 - [ ] REQ5
 - [ ] REQ6
