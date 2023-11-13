@@ -38,8 +38,8 @@ The app is available at https://react-chess-fen-app.onrender.com
 - [x] update docs with how to developing locally
 - [x] update docs with how the app is deployed
 - [x] add app URL
-- [ ] REQ1
-- [ ] REQ2
+- [x] REQ1
+- [x] REQ2
 - [ ] REQ3
 - [ ] REQ4
 - [ ] REQ5
