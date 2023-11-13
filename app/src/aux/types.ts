@@ -15,7 +15,7 @@ export type ColorType = "light" | "dark";
 
 export type BoardState = {
   [key in SquareCoordsType]: {
-    piece: PieceType | null;
+    piece: PieceType | "1";
     selected: boolean;
   };
 };
