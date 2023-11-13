@@ -49,4 +49,55 @@ export class ChessBoard {
       this.board[square].selected = true;
     }
   }
+
+  deselectSquare(square: SquareCoordsType) {
+    if (this.board[square]) {
+      this.board[square].selected = false;
+    }
+  }
+
+  // Method to move a piece from one square to another
+  movePiece(fromSquare: SquareCoordsType, toSquare: SquareCoordsType) {
+    if (this.board[fromSquare] && this.board[toSquare]) {
+      const pieceToMove = this.board[fromSquare].piece;
+      this.board[toSquare].piece = pieceToMove;
+      this.board[fromSquare].piece = "1";
+    }
+  }
+
+  toFenPosition(): string {
+    let fen = "";
+    let emptySquares = 0;
+
+    const columns = "abcdefgh";
+
+    for (let row = 8; row >= 1; row--) {
+      for (const col of columns) {
+        const square = `${col}${row}`;
+        const squareState = this.board[square];
+        const piece = squareState.piece === "1" ? "1" : squareState.piece;
+
+        if (piece === "1") {
+          emptySquares++;
+        } else {
+          if (emptySquares > 0) {
+            fen += emptySquares;
+            emptySquares = 0;
+          }
+          fen += piece;
+        }
+      }
+
+      if (emptySquares > 0) {
+        fen += emptySquares;
+        emptySquares = 0;
+      }
+
+      if (row > 1) {
+        fen += "/";
+      }
+    }
+
+    return fen;
+  }
 }

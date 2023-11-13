@@ -5,6 +5,7 @@ import { isValidBoardString, normalisePositionString } from "./../aux";
 import { ChessBoard } from "../aux/boardState";
 import { BoardState, SquareCoordsType } from "../aux/types";
 import { Board } from "./Board/Board";
+import css from "./GameScreen.module.css";
 
 export const GameScreen = () => {
   const [fenString, setFenString] = useState("");
@@ -23,11 +24,37 @@ export const GameScreen = () => {
   );
 
   const onSquareClick = (square: SquareCoordsType) => {
-    setSelectedSquare(square);
+    // CLick on the same square twice to deselect it
+    if (square === selectedSquare) {
+      clearSquareSelection();
+      return;
+    }
 
+    if (selectedSquare) {
+      // We already have a selected square, so we want to move the piece
+      const chessBoard = new ChessBoard(currentFenString);
+      chessBoard.movePiece(selectedSquare, square);
+      setCurrentFenString(chessBoard.toFenPosition());
+      setBoardState(chessBoard.board);
+
+      setSelectedSquare(null);
+    } else {
+      // We don't have a selected square, so we want to select one
+      setSelectedSquare(square);
+
+      const chessBoard = new ChessBoard(currentFenString);
+      chessBoard.selectSquare(square);
+      setCurrentFenString(chessBoard.toFenPosition());
+      setBoardState(chessBoard.board);
+    }
+  };
+
+  const clearSquareSelection = () => {
     const chessBoard = new ChessBoard(currentFenString);
-    chessBoard.selectSquare(square);
+    chessBoard.deselectSquare(selectedSquare as SquareCoordsType);
     setBoardState(chessBoard.board);
+
+    setSelectedSquare(null);
   };
 
   return (
@@ -87,6 +114,12 @@ export const GameScreen = () => {
               onSquareClick={onSquareClick}
             />
           )}
+
+          <div className={css.button_section}>
+            <button disabled={!selectedSquare} onClick={clearSquareSelection}>
+              Clear selection
+            </button>
+          </div>
         </div>
 
         <div className="right">
