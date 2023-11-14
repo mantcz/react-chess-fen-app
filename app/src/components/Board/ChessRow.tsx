@@ -19,28 +19,17 @@ export const ChessRow = ({ row, firstBox, onSquareClick }: ChessRowProps) => {
   }
 
   return row.map((square, index) => {
-    if (square.piece == "1") {
-      return (
-        <Square
-          key={square.square}
-          type={index % 2 == 0 ? squareColours[0] : squareColours[1]}
-          selected={square.selected}
-          squareCoordinates={square.square}
-          onSquareClick={onSquareClick}
-        />
-      );
-    } else {
-      return (
-        <Square
-          key={square.square}
-          type={index % 2 == 0 ? squareColours[0] : squareColours[1]}
-          selected={square.selected}
-          squareCoordinates={square.square}
-          onSquareClick={onSquareClick}
-        >
-          <Piece type={square.piece} />
-        </Square>
-      );
-    }
+    return (
+      <Square
+        key={square.square}
+        type={index % 2 == 0 ? squareColours[0] : squareColours[1]}
+        selected={square.selected}
+        squareCoordinates={square.square}
+        onSquareClick={onSquareClick}
+      >
+        {/* Don't show a piece when it's empty square :-)  */}
+        {square.piece !== "1" && <Piece type={square.piece} />}
+      </Square>
+    );
   });
 };
