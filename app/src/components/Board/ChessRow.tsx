@@ -25,6 +25,8 @@ export const ChessRow = ({ row, firstBox, onSquareClick }: ChessRowProps) => {
           key={square.square}
           type={index % 2 == 0 ? squareColours[0] : squareColours[1]}
           selected={square.selected}
+          squareCoordinates={square.square}
+          onSquareClick={onSquareClick}
         />
       );
     } else {
